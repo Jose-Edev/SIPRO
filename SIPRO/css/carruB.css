@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
+
+.carousel-container {
+    width: 50.3%;
+    max-width: 1200px;
+    height: 530px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    background-color: #fff;
+}
+
+.carousel-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.carousel-media {
+    width: 100%;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-media img, .carousel-media iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-text {
+    padding: 10px;
+    padding-left: 30px;
+	padding-bottom: 70px;
+    max-height: 120px; /* Establece una altura máxima */
+    overflow-y: auto; /* Agrega un scroll vertical si el contenido excede el max-height */
+}
+
+h2, .parrafo {
+    overflow: visible;
+    white-space: normal;
+}
+
+.botCont {
+    transform: translateY(-325px);
+}
+
+h2 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    color: #26384E;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+    transition-delay: 0.2s;
+    overflow: visible;
+    white-space: normal;
+}
+
+.parrafo {
+    font-size: 16px;
+    line-height: 24px;
+    color: #889DB8;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+    transition-delay: 0.3s;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: visible;
+    white-space: normal;
+}
+
+.carousel-indicators2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.carousel-indicators2 span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgba(255, 0, 0, 0.3);
+    margin: 0 5px;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.carousel-indicators2 span.active {
+    background-color: #ff0000;
+    width: 20px;
+    border-radius: 10px;
+}
+
+.carousel-controls {
+    position: relative;
+    bottom: 20px;
+    left: 20px;
+}
+
+.carousel-controls button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-controls button:hover {
+    background-color: #555;
+}
+
+.carousel-controls button::before {
+    content: "";
+    position: absolute;
+    background-color: #000000;
+    height: 1px;
+    width: 0;
+    left: 0;
+    bottom: -1px;
+    transition: 0.2s;
+}
+
+.carousel-controls button:hover::before {
+    width: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+    .carousel-container {
+        width: 97%;
+        height: 600px;
+    }
+
+    .carousel-media {
+        height: 450px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .carousel-container {
+        height: 500px;
+    }
+
+    .carousel-media {
+        height: 350px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .carousel-container {
+        height: 400px;
+    }
+
+    .carousel-media {
+        height: 250px;
+    }
+
+    h2 {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .parrafo {
+        font-size: 14px;
+        line-height: 22px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .carousel-container {
+        height: 350px;
+    }
+
+    .carousel-media {
+        height: 200px;
+    }
+
+    h2 {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .parrafo {
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .botCont {
+        transform: translateY(-235px);
+    }
+}
+
+/* @media screen and (max-width: 520px) {
+    body {
+        padding: 16px;
+    }
+} */
+@media screen and (max-width: 768px) {
+    .carousel-text {
+        max-height: 120px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .carousel-text {
+        max-height: 100px;
+    }
+}
